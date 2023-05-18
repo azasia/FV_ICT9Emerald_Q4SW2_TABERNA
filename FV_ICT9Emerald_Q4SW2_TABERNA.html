@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Seatwork 2</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body style="background-color: #cce6e6">
+	<br><br>
+	<h1 style="font-family:'Courier Prime';"><b>CONVERTING TIME</b></h1>
+	<br><br><br><br><br>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6" style="background-color: #80c0c0"><br>
+				<h5 style="text-align: center; color: white">From Seconds</h5>
+				<p align="center"><input type="name" id="SECS"></p>
+				<p align="center">
+				<button class="btn btn-ouline btn-primary" onclick="SECmin()">To Minutes</button>
+				<button class="btn btn-outline btn-info" onclick="SEChrs()">To Hours</button>
+				<button class="btn btn-outline btn-primary" onclick="SECday()">To Days</button>
+				</p>
+			</div>
+			<div class="col-md-6" style="background-color: #66b3b3"><br>
+				<h5 style="text-align: center; color: white">From Minutes</h5>
+				<p align="center"><input type="name" id="MINS"></p>
+				<p align="center">
+				<button class="btn btn-outline btn-info" onclick="MINSsecs()">To Seconds</button>
+				<button class="btn btn-outline btn-primary" onclick="MINShours()">To Hours</button>
+				<button class="btn btn-outline btn-info" onclick="MINsdays()">To Days</button>
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6" style="background-color: #66b3b3"><br>
+				<h5 style="text-align: center; color: white">From Hours</h5>
+				<p align="center"><input type="name" id="HOURS"></p>
+				<p align="center">
+				<button class="btn btn-outline btn-info" onclick="HOURSsecs()">To Seconds</button>
+				<button class="btn btn-outline btn-primary" onclick="HOURSmins()">To Minutes</button>
+				<button class="btn btn-outline btn-info" onclick="HOURSdays()">To Days</button>
+				</p>
+			</div>
+			<div class="col-md-6" style="background-color: #80c0c0"><br>
+				<h5 style="text-align: center; color: white">From Days</h5>
+				<p align="center"><input type="name" id="DAYS"></p>
+				<p align="center">
+				<button class="btn btn-outline btn-primary" onclick="DAYSsecs()">To Seconds</button>
+				<button class="btn btn-outline btn-info" onclick="DAYSmins()">To Minutes</button>
+				<button class="btn btn-outline btn-primary" onclick="DAYShours()">To Hours</button>
+				</p>
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	function SECmin(){
+		let x = parseInt(document.getElementById('SECS').value);
+		let y = 60;
+		alert(x / y);
+	}
+	function SEChrs(){
+		let x = parseInt(document.getElementById('SECS').value);
+		let y = 3600;
+		alert(x / y);
+	}
+	function SECday(){
+		let x = parseInt(document.getElementById('SECS').value);
+		let y = 86400;
+		alert(x / y);
+	}
+	function MINsec(){
+		let x = parseInt(document.getElementById('MINS').value);
+		let y = 60;
+		alert(x * y);
+	}
+	function MINhrs(){
+		let x = parseInt(document.getElementById('MINS').value);
+		let y = 60;
+		alert(x / y);
+	}
+	function MINday(){
+		let x = parseInt(document.getElementById('MINS').value);
+		let y = 1440;
+		alert(x / y);
+	}
+	function HRSsec(){
+		let x = parseInt(document.getElementById('HOURS').value);
+		let y = 3600;
+		alert(x * y);
+	}
+	function HRSmin(){
+		let x = parseInt(document.getElementById('HOURS').value);
+		let y = 60;
+		alert(x * y);
+	}
+	function HRSday(){
+		let x = parseInt(document.getElementById('HOURS').value);
+		let y = 24;
+		alert(x / y);
+	}
+	function DAYsec(){
+		let x = parseInt(document.getElementById('DAYS').value);
+		let y = 86400;
+		alert(x * y);
+	}
+	function DAYmin(){
+		let x = parseInt(document.getElementById('DAYS').value);
+		let y = 1440;
+		alert(x * y);
+	}
+	function DAYhrs(){
+		let x = parseInt(document.getElementById('DAYS').value);
+		let y = 24;
+		alert(x * y);
+	}
+</script>
+</html>
